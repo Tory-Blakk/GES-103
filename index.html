@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> Nigerian People And Culture Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nigerian People And Culture</h1>
+            <p>GES 103 Practice Quiz</p>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </header>
+
+        <div class="mode-toggle">
+            <button class="toggle-btn active" id="quiz-mode">Quiz Mode</button>
+            <button class="toggle-btn" id="learning-mode">Learning Mode</button>
+        </div>
+
+        <!-- Quiz info + controls (now includes reset button and answered count) -->
+        <div class="quiz-info">
+            <div class="progress-meta">
+                <div id="progress">Question <span id="current">1</span> of <span id="total">91</span></div>
+                <div id="answered-display">Answered: <span id="answered-count">0</span>/<span id="total-answered">91</span></div>
+            </div>
+
+            <div class="controls">
+                <div id="score-display">Score: <span id="score-value">0</span>/<span id="max-score">91</span></div>
+                <button class="reset-btn" id="reset-btn" title="Start a new attempt">New Attempt</button>
+            </div>
+        </div>
+
+        <!-- Progress bar area (visual progress tracking) -->
+        <div class="progress-wrap" aria-hidden="false">
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="progress-bar" id="progress-bar" style="width:0%"></div>
+            </div>
+            <div class="progress-meta-small">
+                <div><strong id="answered-summary">0</strong> answered</div>
+                <div class="progress-label"><span id="progress-percent">0%</span> completed</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+                <div class="question-nav">
+                    <h3 id="toggle-questions">Questions ▾</h3>
+                    <div class="question-grid" id="question-numbers">
+                        <!-- Question numbers will be generated here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question-text" id="question-text"> <!-- populated by JS later --> </div>
+
+                <div class="options-container" id="options-container">
+                    <!-- Options will be generated here -->
+                </div>
+
+                <div class="feedback" id="feedback">
+                    <!-- Feedback will be shown here -->
+                </div>
+
+                <div class="navigation">
+                    <button class="nav-btn" id="prev-btn" disabled>Previous</button>
+                    <button class="submit-btn" id="submit-btn">Submit Quiz</button>
+                    <button class="nav-btn" id="next-btn">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-container" id="results-container">
+            <div class="results-header">
+                <h2>Quiz Results</h2>
+            </div>
+
+            <div class="score-summary">
+                <div class="score-circle" id="score-circle">
+                    <span id="final-score">0</span>/<span id="total-questions">378</span>
+                </div>
+                <p>You attempted <span id="attempted">0</span> questions</p>
+                <p>Correct: <span id="correct-count">0</span> | Incorrect: <span id="incorrect-count">0</span></p>
+            </div>
+
+            <div id="review-questions">
+                <!-- Review of questions will be generated here -->
+            </div>
+
+            <div style="text-align: center; margin-top: 18px;">
+                <button class="clear-btn" id="clear-btn">Clear Previous Attempts</button>
+            </div>
+        </div>
+
+        <!-- Signature requested by you -->
+        <footer class="signature">
+            Favour,<br>
+            U2024 Human Anatomy.
+        </footer>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
